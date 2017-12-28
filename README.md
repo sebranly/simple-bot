@@ -26,9 +26,9 @@ Go to `Train` tab and play around by typing something under "Human" and hit "Ask
 
 ## Scenario
 
-Here is a scenario you could witness by chatting with this bot. The goal here is to show that we, as developers, were able to use several several different AIML aspects
+Here is a scenario you could witness by chatting with this bot. The goal here is to show that we, as developers, were able to use several AIML aspects
 
-### Format for the examples:
+### Format for the examples
 ```
 i: this is what you should type with your keyboard (the input)
 o: this is what the bot will reply (the output)
@@ -69,11 +69,11 @@ e: thanks to <bot name="age" /> tag it can fetch the bot age we defined as a pro
 ```
 i1: Say my name
 o1: You didn't tell me yet, sorry.
-e1: the bot is not able to reply as the user didn't tell him his name first
+e1: the bot is not able to reply as the user didn't tell it his name first
 
 i2: My name is Sebastian and I'm 77 years old
 o2: Oh right, your name is Sebastian and you are 77 years old!
-e2: enables the bot to create a username variable with the value Sebastian
+e2: enables the bot to create a username variable with the value "Sebastian"
 
 i3: Say my name
 o3: Your name is Sebastian
@@ -118,7 +118,7 @@ o1: You're a great person!
 or
 i2: No
 o2: You're not a real developer then. Or actually you take naps like sebranly instead.
-e: uses <that> tag to memorize a topic context (e.g. coffee in this case)
+e: uses <that> tag to memorize a topic context (e.g. "coffee" in this case)
 ```
 
 ```
@@ -128,7 +128,7 @@ i: Today is friday
 o: The weekend is getting closer!
 i: Today is ufo
 o: Hmm, it is not a valid day!
-e: use conditions in order to behave like a switch(case) structure in C for example
+e: uses conditions in order to pick an appropriate answer (it behaves like a switch (case) structure in C for example)
 ```
 
 ```
@@ -138,7 +138,8 @@ i2: Two is even
 o2: Oh nice, thanks for teaching me this!
 i3: Is two even
 o3: Yes it is! You just taught me that :)
-e: thanks to <learn> tag, the bot learnt something new it can use
+e: thanks to <learn> tag, the bot learnt something new it can use forever
+Note: you might not see this behaviour if someone before you played around with the chatbot and taught it this before. You'll never get o1 but just o3 instead.
 ```
 
 ```
@@ -146,13 +147,13 @@ i: Rocket launch in 10
 o: 1 2 3 4 5 6 7 8 9 10
 i: Rocket launch in 3
 o: 1 2 3
-e: loop over thanks to a variable to change and display its value after each iteration
+e: loops over thanks to a variable by changing and displaying its value after each iteration
 ```
 
 ```
 i: Who is sebranly
 o: He's the author of this simple bot, well he made me ("author" is bold)
-e: shows that we can use HTML tags to format the bot answer
+e: shows that we can use HTML tags to format the bot's answer
 ```
 
 ```
@@ -160,5 +161,5 @@ i1: Can we talk about SpaceX?
 o1: Sure!
 i2: So, I want to know... (or anything else)
 o2: Well, just kidding, I know you would like to learn more about SpaceX but I'm just a simple bot
-e: shows that we can encapsulate the conversation into specific topics (sub-blocks of AIML)
+e: shows that we can encapsulate the conversation into specific topics (AIML sub-blocks)
 ```
