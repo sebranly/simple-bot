@@ -1,11 +1,11 @@
 # simplebot
 
-This is a really simple bot we created as final-year students in 2016, in a team of 2, by using AIML. It is hosted on Pandorabots (free).
-We were given a few hours and had to play aroud with AIML in order to show we were able to use its format (see "Scenario" down below for more explanation about it)
+This is a really simple chatbot we created as final-year students in 2016, in a team of 2, by using AIML. It is hosted on Pandorabots (for free).
+We were given a few hours and had to play around with AIML in order to show we were able to use its format (see "Scenario" down below for more explanation about it)
 
 ## Test
 
-You can chat with this bot by going to https://playground.pandorabots.com/en/clubhouse/ > type "sebranly_simple_bot" in the search bar and then click on "Talk" on the resulting chatbot
+You can chat with this bot by going to https://playground.pandorabots.com/en/clubhouse/. Then type `sebranly_simple_bot` in the search bar and then click on "Talk" on the resulting chatbot.
 See "Scenario" down below in order to learn how to interact with it as it's a simple showcase
 
 ## Installation
@@ -13,27 +13,29 @@ See "Scenario" down below in order to learn how to interact with it as it's a si
 The Pandorabots Platform is "one of the oldest and largest chatbot hosting services in the world."
 
 Here are the steps to follow in order to create a copy of this chatbot:
-Go to https://playground.pandorabots.com > Log In > My Bots > Create Bot
-Type a name for the chatbot and select English as the language
-Once the bot created, you can go to Files tab and delete some files:
-- under the AIML section: udc
-- under the Substitutions section: denormal, gender, normal, person and person2
-Note: do not delete anything under the System section
+- Go to https://playground.pandorabots.com > `Log In` > `My Bots` > `Create Bot`
+- Type a name for the chatbot and select `English` as the language
+- Once the bot created, you can go to `Files` tab and delete some files:
+	- under the AIML section: `udc`
+	- under the Substitutions section: `denormal`, `gender`, `normal`, `person` and `person2`
+		- Note: do not delete anything under the System section
 
-Now, you can upload files you got from this git repository. More specifically, you can upload pand_initial.aiml, colors.set, countriescapitals.map and normal.substitution files
-Under the SYSTEM section on the interface, go to properties and add a key-value age with the value you want (e.g. 13). Indeed, that's the only change I made to this file.
-Go to Train tab and play around by typing something under "Human" and hit "Ask" to see the bot's reply
+Now, you can upload files you got from this git repository. More specifically, you can upload `pand_initial.aiml`, `colors.set`, `countriescapitals.map` and `normal.substitution` files.
+Under the SYSTEM section on the interface, go to properties and add a key-value whose key is `age` with the value you want (e.g. `13`). Indeed, that's the only change I made to this file.
+Go to `Train` tab and play around by typing something under "Human" and hit "Ask" to see the bot's reply
 
 ## Scenario
 
-Here is a scenario you could witness by chatting with this bot. The goal here is to show that we were able to use several AIML aspects
+Here is a scenario you could witness by chatting with this bot. The goal here is to show that we, as developers, were able to use several several different AIML aspects
+
+### Format for the examples:
 ```
-Format for the examples:
 i: this is what you should type with your keyboard (the input)
 o: this is what the bot will reply (the output)
 e: this is the reason why the bot replies this way (the explanation from an AIML perspective)
 ```
 
+### Examples
 ```
 i: guihfghuhfggfihi (basically, something meaningless)
 o: I did not understand. (or something similar)
