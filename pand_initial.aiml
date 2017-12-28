@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+<category><pattern>*</pattern>
+<template>
+<random>
+    <li>I did not understand.</li>
+    <li>Hmm I'm not sure I got what you mean.</li>
+    <li>What do you mean?</li>
+    <li>I'm sorry. Can you reformulate?</li>
+</random>
+</template>
+</category>
+
+<category>
+    <pattern>HELLO</pattern>
+    <template>Hello!</template>
+</category>
+
+<category>
+    <pattern>HEY</pattern>
+    <template><srai>HELLO</srai></template>
+</category>
+
+<category>
+    <pattern>I AM * YEARS OLD</pattern>
+    <template>You're <star /> years old!</template>
+</category>
+
+<category>
+    <pattern>HOW OLD ARE YOU</pattern>
+    <template>I'm <bot name="age" /> years old.</template>
+</category>
+
+<category>
+    <pattern>MY NAME IS * AND I AM * YEARS OLD</pattern>
+    <template>Oh right, your name is <set name="username"><star /></set> and you are <star index ="2"/> years old!</template>
+</category>
+
+<category>
+    <pattern>SAY MY NAME</pattern>
+    <template>
+    <condition name="username">
+        <li value="*">Your name is <get name="username" /></li>
+        <li>You didn't tell me yet, sorry.</li>
+    </condition></template>
+</category>
+
+<category>
+    <pattern>THE APPLE IS *</pattern>
+    <template>
+    <think><set var="adjective"><star /></set></think>
+I love <get var="adjective"/> apples.
+    </template>
+</category>
+
+<category>
+    <pattern>WHAT IS THE FIRST WORD IN *</pattern>
+    <template>Pretty easy, it's <first><star /></first></template>
+</category>
+
+<category>
+    <pattern>REMOVE THE FIRST WORD FROM *</pattern>
+    <template>Okay, here's what I get: <rest><star /></rest></template>
+</category>
+
+<category>
+    <pattern>IS <set>colors</set> A COLOR</pattern>
+    <template>Yes, <star /> is indeed a color</template>
+</category>
+
+<category>
+    <pattern>IS * A COLOR</pattern>
+    <template>Nope, <star /> is not a color</template>
+</category>
+
+<category>
+    <pattern>WHAT IS THE CAPITAL OF *</pattern>
+    <template><map name="countriescapitals"><star /></map> is the capital of <star /></template>
+</category>
+
+<category>
+    <pattern>^ COFFEE ^</pattern>
+    <template>Do you like coffee?</template>
+</category>
+
+<category>
+    <pattern>YES</pattern>
+    <that>DO YOU LIKE COFFEE</that>
+    <template>You're a great person!</template>
+</category>
+
+<category>
+    <pattern>NO</pattern>
+    <that>DO YOU LIKE COFFEE</that>
+    <template>You're not a real developer then. Or actually you take naps like sebranly instead.</template>
+</category>
+
+<category>
+    <pattern>TODAY IS *</pattern>
+    <template>
+    <think><set name="today"><star /></set></think>
+    <condition name="today">
+        <li value="monday">The beginning of the week!</li>
+        <li value="tuesday">At least it's not monday...</li>
+        <li value="wednesday">Kids' day!</li>
+        <li value="thursday">Oh right, I love thursdays</li>
+        <li value="friday">The weekend is getting closer!</li>
+        <li value="saturday">Nice, you can go shopping</li>
+        <li value="sunday">The perfect day :)</li>
+        <li>Hmm, it is not a valid day!</li>
+    </condition>
+    </template>
+</category>
+
+<category>
+    <pattern>TWO IS EVEN</pattern>
+    <template>Oh nice, thanks for teaching me this!
+    <learn>
+    <category>
+    <pattern>IS TWO EVEN</pattern>
+    <template>Yes it is! You just taught me that :)</template>
+    </category>
+    </learn>
+    </template>
+</category>
+
+<category>
+    <pattern>ROCKET LAUNCH IN <set>number</set></pattern>
+    <template><think><set var="count">0</set></think>
+    <condition var="count">
+    <li><value><star /></value></li>
+    <li><br /><set var="count"><map><name>successor</name><get var="count" /></map></set><loop/></li></condition></template>
+</category>
+
+<category>
+    <pattern>$WHO IS *</pattern>
+    <template><srai><star /></srai></template>
+</category>
+
+<category>
+    <pattern>SEBRANLY</pattern>
+    <template>He's the <b>author</b> of this simple bot, well he made me</template>
+</category>
+
+<category>
+    <pattern>ELON MUSK</pattern>
+    <template>SpaceX's CEO!</template>
+</category>
+
+<!-- Topics -->
+<category>
+<pattern>CAN WE TALK ABOUT SPACEX</pattern>
+<template>Sure!<think><set name="topic">spacex</set></think></template>
+</category>
+
+<!-- Gestion des topics -->
+<topic name="spacex">
+
+<category>
+<pattern>*</pattern>
+<template>Well, just kidding, I know you would like to learn more about SpaceX but I'm just a simple bot<think><set name="topic">anything</set></think></template>
+</category>
+
+</topic>
+
+</aiml>
